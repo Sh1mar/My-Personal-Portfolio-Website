@@ -253,6 +253,11 @@ nav ul li a:hover:after {
    text-decoration: none;
 }
 
+.footer i:hover{ 
+   box-shadow: 0 7px 50px 10px #000000aa;
+   transform: scale(1.2);
+}
+
 .social-icons {
    display: flex;
    justify-content: center;
