@@ -1,0 +1,365 @@
+/* MARK: Intro Animations */
+.intro-resume .animated-text { 
+   font-family: "VT323", sans-serif;
+   overflow: hidden;
+   font-size: 75px;
+   line-height: 100px;
+   font-weight: 400;
+   min-width: 200px; 
+   position: relative; 
+   margin-top: 20px;
+}
+
+.intro-resume .animated-text span::before {
+   content: "";
+   color:var(--secondary-color);
+   animation: intro-words 20s infinite;
+}
+
+.intro-resume .animated-text span::after {
+   content: " ";
+   position: absolute;
+   width: calc(100% + 8px);
+   height: 100%;
+   background-color: var(--primary-color);
+   border-left: 5px solid var(--text-tertiary);
+   right: -8px;
+   animation: intro-cursor .8s infinite, intro-typing 20s steps(14) infinite;
+}
+
+@keyframes intro-cursor {
+   to {
+       border-left: 5px solid var(--text-primary);
+   }
+}
+
+@keyframes intro-words {
+   0%, 20% {
+       content: "{ my_resume }";
+   }
+   21%, 40% {
+       content: "{ my_resume }";
+   }
+   41%, 60% {
+       content: "{ my_resume }";
+   }
+   61%, 80% {
+       content: "{ my_resume }";
+   }
+   81%, 100% {
+       content: "{ my_resume }";
+   }
+}
+
+@keyframes intro-typing {
+   10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+       width: 0;
+   }
+   5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+       width: calc(100% + 8px);
+   }
+}
+
+/* MARK: Resume */
+.flex-row {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap; 
+   justify-content: start;
+   align-items: center;
+}
+
+.resume-icons {
+   list-style: none;
+   padding: 0;
+   margin: 0px;
+   display: flex;
+   flex-direction: row; 
+   flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+   gap: 15px; 
+}
+
+.resume-icons li {
+   display: flex;
+   align-items: center;
+   gap: 10px; 
+   white-space: nowrap; 
+}
+
+.resume-icons li a {
+   font-family: "Verdana",sans-serif;
+   font-size: 20px;
+   color: inherit; 
+   display: flex;
+   align-items: center;
+   gap: 10px; 
+}
+
+.resume-icons i:hover {
+   color: #007BFF; /* Change color on hover if desired */
+}
+
+/* MARK: Resume Styling  */
+
+.my-resume h1{ 
+   font-family: "Trebuchet MS",sans-serif;
+   font-size: 55px;
+   font-weight: 600;
+}
+
+.my-resume h2{ 
+   font-family: "Trebuchet MS",sans-serif;
+   font-size: 30px;
+   font-weight: 600;
+   color: #007bff;
+}
+
+.my-resume h3{ 
+   font-family: "Trebuchet MS",sans-serif;
+   font-size: 30px;
+   border-bottom: 2px solid #333;
+   font-weight: 600;
+   color: #333;
+}
+
+.my-resume .section-p{
+   font-family: "Verdana",sans-serif;
+   font-size: 22px;
+   font-weight:500;
+   padding: 0;
+   margin-top: 5px;
+}
+
+.my-resume .sub-heading{
+   font-family: "Verdana",sans-serif;
+   font-size: 16px;
+   font-weight: 600;
+   color: #007bff;
+   padding: 0;
+   margin-top: 5px;
+}
+.projects h4{
+   font-family: "Verdana",sans-serif;
+   font-size : 18px;
+   font-weight: 500;
+}
+
+.my-resume .p-text-bold{
+   font-family: "Montserrat",sans-serif;
+   font-size: 18px;
+   font-weight: 700;
+   padding: 0;
+   margin-top: 5px;
+}
+
+.my-resume .bullet-list{
+   list-style:disc;
+   font-family: "Montserrat",sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   color: black;
+
+   padding: 0;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   line-height :1.5;
+}
+
+.my-resume .profile-text {
+   font-family: "Bahnschrift",sans-serif;
+   font-size: 17px;
+   font-weight: 0;
+}
+
+.my-resume .languages {
+   font-family: "Bahnschrift",sans-serif;
+   font-size: 14px;
+   font-weight: 0;
+
+}
+
+/* MARK: Resume Grid */
+.my-resume .grid { 
+   align-items: start;
+   height: 0px;
+   padding: 20px;
+   gap : 10px
+}
+
+/* Education -1 */
+.my-resume .grid >*:nth-child(1) {
+   grid-column: 1 / span 2;
+   grid-row :  0 / span 2;
+}
+
+/* Education - 2 */
+.my-resume .grid >*:nth-child(2) {
+   grid-column: 1/ span 2;
+   /* grid-row: 2 /span 2; */
+}
+
+/* Projects*/
+.my-resume .grid >*:nth-child(3) {
+   grid-column: 1/ span 2;
+   grid-row :  3;
+}
+/* Profile */
+.my-resume .grid >*:nth-child(4) {
+   grid-column: 3/ span 1;
+   grid-row :  1;
+}
+
+/* Skills */
+.my-resume .grid >*:nth-child(5) {
+   grid-column: 3/ span 1;
+   grid-row: 2;
+}
+/* Skills */
+.my-resume .grid >*:nth-child(6) {
+   grid-column: 3/ span 1;
+   grid-row: 3;
+}
+
+/* MARK: Media Queries */
+@media (max-width: 768px) {
+
+   .card-resume{ 
+      overflow: auto;
+      width: 100%;
+   }
+
+   .grid,
+   .grid-4-4{
+      grid-template-columns: 1fr;
+      overflow:visible;
+   
+  }
+
+   /* Education -1 */
+   .my-resume .grid >*:nth-child(1) {
+      grid-column: 1/span 1;
+      grid-row: 1;
+   }
+
+   /* Education - 2 */
+   .my-resume .grid >*:nth-child(2) {
+      grid-column: 1/span 1;
+      grid-row: 2;
+   }
+
+   /* Profile*/
+   .my-resume .grid >*:nth-child(3) {
+      grid-column: 1/span 1;
+      grid-row: 3;
+   }
+   /* Skills */
+   .my-resume .grid >*:nth-child(4) {
+      grid-column: 1/span 1;
+      grid-row: 4;
+   }
+
+   .my-resume .grid >*:nth-child(5) {
+      grid-column: 1/ span 1;
+      grid-row: 5;
+   }
+   
+   .my-resume .grid >*:nth-child(6) {
+      grid-column: 1/ span 1;
+      grid-row: 6;
+   }
+   
+
+  /* Adjust resume icons for better spacing */
+  .resume-icons {
+      flex-direction: column;
+      align-items: start;
+      gap: 5px;
+  }
+
+  .resume-icons li {
+      justify-content: flex-start;
+  }
+
+  .my-resume h1 {
+      font-size: 40px;
+  }
+
+  .my-resume h2 {
+      font-size: 25px;
+  }
+
+  .my-resume h3 {
+      font-size: 25px;
+  }
+
+  .my-resume .section-p {
+      font-size: 18px;
+  }
+
+  .my-resume .sub-heading {
+      font-size: 14px;
+  }
+
+  .my-resume .bullet-list {
+      font-size: 12px;
+  }
+
+  .my-resume .profile-text {
+      font-size: 14px;
+  }
+
+  .my-resume .languages {
+      font-size: 12px;
+  }
+}
+
+
+/* Mobile  */
+@media (max-width: 500px) {
+
+   .intro-resume .animated-text { 
+      font-size: 55px;
+      font-weight: 200;
+      
+      position: relative; 
+   }
+
+   .card-resume{ 
+      overflow-x: hidden;
+      width: 100%;
+   }
+
+   .my-resume h1 {
+      font-size: 30px;
+  }
+
+  .my-resume h2 {
+      font-size: 20px;
+  }
+
+  .my-resume h3 {
+      font-size: 20px;
+  }
+
+  .my-resume .section-p {
+      font-size: 16px;
+  }
+
+  .my-resume .sub-heading {
+      font-size: 12px;
+  }
+
+  .my-resume .bullet-list {
+      font-size: 10px;
+  }
+
+  .my-resume .profile-text {
+      font-size: 12px;
+  }
+
+  .my-resume .languages {
+      font-size: 10px;
+  }
+
+}
+

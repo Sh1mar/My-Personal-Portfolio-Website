@@ -1,0 +1,157 @@
+/*MARK: About Animated  */
+.intro-portfolio .animated-text { 
+   font-family: "VT323", sans-serif;
+   overflow: hidden;
+   font-size: 75px;
+   line-height: 100px;
+   font-weight: 400;
+   min-width: 200px; 
+   position: relative; 
+   margin-top: 20px;
+}
+
+.intro-portfolio .animated-text span::before {
+   content: "";
+   color:var(--secondary-color);
+   animation: intro-words 20s infinite;
+}
+
+.intro-portfolio .animated-text span::after {
+   content: " ";
+   position: absolute;
+   width: calc(100% + 8px);
+   height: 100%;
+   background-color: var(--primary-color);
+   border-left: 5px solid var(--text-tertiary);
+   right: -8px;
+   animation: intro-cursor .8s infinite, intro-typing 20s steps(14) infinite;
+}
+
+@keyframes intro-cursor {
+   to {
+       border-left: 5px solid var(--text-primary);
+   }
+}
+
+@keyframes intro-words {
+   0%, 20% {
+       content: "{ _portfolio }";
+   }
+   21%, 40% {
+       content: "{ _portfolio }";
+   }
+   41%, 60% {
+       content: "{ _portfolio }";
+   }
+   61%, 80% {
+       content: "{ _portfolio }";
+   }
+   81%, 100% {
+       content: "{ _portfolio }";
+   }
+}
+
+@keyframes intro-typing {
+   10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+       width: 0;
+   }
+   5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+       width: calc(100% + 8px);
+   }
+}
+
+/*MARK : card-portfolio Gallery  */
+.card-portfolio h1{ 
+   font-family: "VT323", sans-serif;
+   font-size: 65px;
+   line-height: 52px;
+}
+
+.portfolio-gallery  .card-portfolio:nth-child(1) {
+   grid-column: 1/ span 2; 
+   grid-row: 1 / span 2; 
+}
+
+.portfolio-gallery .card-portfolio:nth-child(2) {
+   grid-column: 3/ span 4; 
+   grid-row: 1 / span 2; 
+}
+
+/* MARK: Media Queries */
+@media (max-width: 768px) {
+
+   /* Stack every grid to 1 col */
+   .grid{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+   }
+
+   .portfolio-gallery .card-portfolio:nth-child(1),
+   .portfolio-gallery .card-portfolio:nth-child(2) {
+      grid-column: 1; /* Each card takes the full width */
+      grid-row: auto; /* Adjust rows automatically */
+      margin: 10px auto; /* Reduce margin between cards */
+   }
+
+   .card-portfolio .fab.fa-github {
+      font-size: 2.3rem;
+      margin-top:1rem;
+   }
+
+}
+
+/* Mobile  */
+@media (max-width: 500px) {
+   
+   .intro-portfolio .animated-text { 
+      font-size: 50px;
+      line-height: 45px;
+      font-weight: 200;
+      
+      position: relative; 
+   }
+
+   .intro-portfolio p { 
+      font-size: 20px;
+      
+   }
+
+   .card-portfolio .description { 
+      font-size: 22px;
+      font-weight: 200;
+      
+   }
+
+   .card-portfolio {
+      margin: 1rem auto;
+      width: 90%;
+   }
+
+   .grid, .grid-4 {
+      grid-template-columns: 1fr;
+   }
+
+   .portfolio-gallery .card-portfolio{
+      font-size: 50px;
+      line-height: 45px;
+   }
+
+   .p-heading
+   .portfolio-gallery .lead-p {
+      font-size: 20px;
+      line-height: 20px;
+   }
+
+   .card-portfolio .image {
+      border-radius: .5rem;
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      margin-right: 10px;
+      margin-left: 10px
+
+   }
+
+
+}
+
