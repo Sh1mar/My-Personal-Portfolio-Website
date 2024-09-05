@@ -1,4 +1,5 @@
 
+require("dotenv").configure();
 const nodeMailer = require("nodemailer")
 
 function hide_show_HTML_index() { 
@@ -75,7 +76,21 @@ function sendEmail(){
       
       homeIndex_name = document.getElementById("indexForm_name").value;
       homeIndex_email = document.getElementById("indexForm_email").value;
-      homeIndex_name = document.getElementById("indexForm_message").value;
+      homeIndex_message = document.getElementById("indexForm_message").value;
+
+      const html  =` <p> ${homeIndex_message}</p>`
+
+      async function sendEmail() {
+         nodeMailer.createTransport({
+            host : "shimar1167@gmail.com",
+            port : 465,
+            secure : true, 
+            auth : { 
+               user : "",
+               pass : process.env.PASSWORD
+            }
+         });
+       }
 
 
    }
