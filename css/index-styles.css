@@ -139,378 +139,31 @@
 .services .grid >*:nth-child(7) {
    grid-column: 1/ span 4;
 }
- 
+
+.full-width {
+   grid-column: 1 / span 4 !important;
+}
+
  
 .services .grid {
    padding: 30px;
 }
 
 /* Styling for the animated HTML5 text */
-.services .animated-text-one {
+.services .animated-text {
    font-family: "VT323", sans-serif;
-   overflow: hidden;
    font-size: 45px;
    line-height: 40px;
    font-weight: 600;
-   min-width: 200px; /* Add a value for min-width */
-   position: relative; /* Ensure correct positioning for ::after pseudo-element */
-   margin-left: 0;
-   display: flex;
-   align-items: center;
-   justify-content: center
-}
-.services .animated-text-one span::before {
-   content: "";
-   color: black;
-   animation: HTML5-words 20s infinite;
-}
-
-.services .animated-text-one span::after {
-   content: " ";
-   position: absolute;
-   width: calc(100% + 8px);
-   height: 100%;
-   background-color: #fff;
-   border-left: 5px solid black;
-   right: -8px;
-   animation: services-intro-cursor .8s infinite,  services-intro-typing 20s steps(14) infinite;
-}
-
-.services .animated-text-two {
-   font-family: "VT323", sans-serif;
-   overflow: hidden;
-   font-size: 45px;
-   line-height: 40px;
-   font-weight: 600;
-   min-width: 200px;
-   position: relative; /* Ensure correct positioning for ::after pseudo-element */
-   margin-left: 0;
-   display: flex;
-   align-items: center;
-   justify-content: center
-}
-.services .animated-text-two span::before {
-   content: "";
-   color: black;
-   animation: JS-words 20s infinite;
-}
-
-.services .animated-text-two span::after {
-   content: " ";
-   position: absolute;
-   width: calc(100% + 8px);
-   height: 100%;
-   background-color: #fff;
-   border-left: 5px solid black;
-   right: -8px;
-   animation: services-intro-cursor .8s infinite,  services-intro-typing 20s steps(14) infinite;
-}
-
-.services .animated-text-three {
-   font-family: "VT323", sans-serif;
-   overflow: hidden;
-   font-size: 45px;
-   line-height: 40px;
-   font-weight: 600;
-   min-width: 200px; /* Add a value for min-width */
-   position: relative; /* Ensure correct positioning for ::after pseudo-element */
-   /* margin-left: 0; */
    
-   display: flex;
-   align-items: center;
-   justify-content: center
-}
-.services .animated-text-three span::before {
-   content: "";
-   color: black;
-   animation: python-words 20s infinite;
-}
-
-.services .animated-text-three span::after {
-   content: " ";
-   position: absolute;
-   width: calc(100% + 8px);
-   height: 100%;
-   background-color: #fff;
-   border-left: 5px solid black;
-   right: -8px;
-   animation: services-intro-cursor .8s infinite,  services-intro-typing 20s steps(14) infinite;
-}
-
-.services .animated-text-four {
-   font-family: "VT323", sans-serif;
    overflow: hidden;
-   font-size: 45px;
-   line-height: 40px;
-   font-weight: 600;
    min-width: 200px; /* Add a value for min-width */
    position: relative; /* Ensure correct positioning for ::after pseudo-element */
+   margin-left: 0;
    
    display: flex;
    align-items: center;
    justify-content: center;
-}
-
-.services .animated-text-four span::before {
-   content: "";
-   color: black;
-   animation: C-words 20s infinite;
-}
-
-.services .animated-text-four span::after {
-   content: " ";
-   position: absolute;
-   width: calc(100% + 8px);
-   height: 100%;
-   background-color: #fff;
-   border-left: 5px solid black;
-   right: -8px;
-   animation: services-intro-cursor .8s infinite,  services-intro-typing 20s steps(14) infinite;
-}
-
-.services .animated-text-five {
-   font-family: "VT323", sans-serif;
-   overflow: hidden;
-   font-size: 45px;
-   line-height: 40px;
-   font-weight: 600;
-   min-width: 200px; /* Add a value for min-width */
-   margin-left : 10px;
-   position: relative; /* Ensure correct positioning for ::after pseudo-element */
-   /* margin-left: 0; */
-  
-   display: flex;
-   align-items: start;
-   justify-content: start;
-}
-.services .animated-text-five span::before {
-   content: "";
-   color: black;
-   animation: Boostrap-words 20s infinite;
-}
-
-.services .animated-text-five span::after {
-   content: " ";
-   position: absolute;
-   width: calc(100% + 8px);
-   height: 100%;
-   background-color: #fff;
-   border-left: 5px solid black;
-   right: -8px;
-   animation: services-intro-cursor .8s infinite,  services-intro-typing 20s steps(14) infinite;
-}
-
-.services .animated-text-six {
-   font-family: "VT323", sans-serif;
-   overflow: hidden;
-   font-size: 45px;
-   line-height: 40px;
-   font-weight: 600;
-   min-width: 200px; /* Add a value for min-width */
-   margin-left : 10px;
-   position: relative; /* Ensure correct positioning for ::after pseudo-element */
-   /* margin-left: 0; */
-  
-   display: flex;
-   align-items: start;
-   justify-content: start;
-}
-.services .animated-text-six span::before {
-   content: "";
-   color: black;
-   animation: Arduino-words 20s infinite;
-}
-
-.services .animated-text-six span::after {
-   content: " ";
-   position: absolute;
-   width: calc(100% + 8px);
-   height: 100%;
-   background-color: #fff;
-   border-left: 5px solid black;
-   right: -8px;
-   animation: services-intro-cursor .8s infinite,  services-intro-typing 20s steps(14) infinite;
-}
-
-.services .animated-text-seven {
-   font-family: "VT323", sans-serif;
-   overflow: hidden;
-   font-size: 45px;
-   line-height: 40px;
-   font-weight: 600;
-   min-width: 200px; /* Add a value for min-width */
-   margin-left : 10px;
-   position: relative; /* Ensure correct positioning for ::after pseudo-element */
-   /* margin-left: 0; */
-  
-   display: flex;
-   align-items: start;
-   justify-content: start;
-}
-.services .animated-text-seven span::before {
-   content: "";
-   color: black;
-   animation: Flask-words 20s infinite;
-}
-
-.services .animated-text-seven span::after {
-   content: " ";
-   position: absolute;
-   width: calc(100% + 8px);
-   height: 100%;
-   background-color: #fff;
-   border-left: 5px solid black;
-   right: -8px;
-   animation: services-intro-cursor .8s infinite,  services-intro-typing 20s steps(14) infinite;
-}
-
-
-/* Keyframes for words animation specific to intro section */
-@keyframes HTML5-words {
-   0%, 20% {
-      content: "HTML5 & CSS3";  
-   }
-   21%, 40% {
-      content: "HTML5 & CSS3";  
-   }
-   41%, 60% {
-      content: "HTML5 & CSS3";  
-
-   }
-   61%, 80% {
-      content: "HTML5 & CSS3";  
-    }
-   81%, 100% {
-      content: "HTML5 & CSS3";  
-   }
-}
-
-@keyframes JS-words {
-   0%, 20% {
-      content: "Javascript";  
-   }
-   21%, 40% {
-      content: "Javascript";  
-   }
-   41%, 60% {
-      content: "Javascript";  
-
-   }
-   61%, 80% {
-      content: "Javascript";  
-    }
-   81%, 100% {
-      content: "Javascript";  
-   }
-}
-
-@keyframes python-words {
-   0%, 20% {
-      content: "Python";  
-   }
-   21%, 40% {
-      content: "Python";  
-   }
-   41%, 60% {
-      content: "Python";  
-
-   }
-   61%, 80% {
-      content: "Python";  
-    }
-   81%, 100% {
-      content: "Python";  
-   }
-}
-
-@keyframes C-words {
-   0%, 20% {
-      content: "C++";  
-   }
-   21%, 40% {
-      content: "C++";  
-   }
-   41%, 60% {
-      content: "C++";  
-
-   }
-   61%, 80% {
-      content: "C++";  
-    }
-   81%, 100% {
-      content: "C++";  
-   }
-}
-
-@keyframes Boostrap-words {
-   0%, 20% {
-      content: "Bootstrap 5";  
-   }
-   21%, 40% {
-      content: "Bootstrap 5";  
-   }
-   41%, 60% {
-      content: "Bootstrap 5";  
-
-   }
-   61%, 80% {
-      content: "Bootstrap 5";  
-    }
-   81%, 100% {
-      content: "Bootstrap 5";  
-   }
-}
-
-@keyframes Arduino-words {
-   0%, 20% {
-      content: "Arduino";  
-   }
-   21%, 40% {
-      content: "Arduino";  
-   }
-   41%, 60% {
-      content: "Arduino";  
-
-   }
-   61%, 80% {
-      content: "Arduino";  
-    }
-   81%, 100% {
-      content: "Arduino";  
-   }
-}
-
-@keyframes Flask-words {
-   0%, 20% {
-      content: "Flask";  
-   }
-   21%, 40% {
-      content: "Flask";  
-   }
-   41%, 60% {
-      content: "Flask";  
-
-   }
-   61%, 80% {
-      content: "Flask";  
-    }
-   81%, 100% {
-      content: "Flask";  
-   }
-}
-
-@keyframes services-intro-cursor {
-   to {
-       border-left: 5px solid #fff;
-   }
-}
-@keyframes services-intro-typing {
-   10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%,90% {
-       width: 0;
-   }
-   5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
-       width: calc(100% + 8px);
-   }
 }
 
 .services .hover {
@@ -523,7 +176,6 @@
    transform: scale(1.015);
    padding: 10px;
 }
-
 
 /* MARK:Contact Me */
 .contact-me h1{ 
@@ -718,17 +370,5 @@
       height: 180px;
       object-fit: cover;
       margin-bottom: 10px;
-   }
-
-   .services .animated-text-one,
-   .services .animated-text-two,
-   .services .animated-text-three,
-   .services .animated-text-four,
-   .services .animated-text-five,
-   .services .animated-text-six,
-   .services .animated-text-seven {
-      font-size: 30px;
-      line-height: 30px;
-      min-width: 95px;
    }
 }

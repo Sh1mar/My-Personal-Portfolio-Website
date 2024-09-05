@@ -5,8 +5,6 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Shimar Khan | Personal Portfolio</title>
 
-   <script src= main.js></script>
-
    <!-- Font Awesome Classes for Icons -->
    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
    <!-- Google Fonts  -->
@@ -119,64 +117,51 @@
         
          <div class="text-center">
             <h1>&lt;Frameworks and Languages&gt;</h1>
-            <p class ="p-heading" >This is my knowledge pool!</p>
+            <p class ="p-heading" >My knowledge pool!</p>
          </div>
 
          <div class="btn-filter text-center m-1">
-            <a href="#" class="btn btn-outline">programming_languages</a>
-            <a href="#" class="btn btn-outline">_frameworks/libraries</a> 
-            <a href="#" class="btn btn-outline">_other</a>
+            <button class="btn btn-outline" id = "frameworks&languages_programming">programming_languages</button>
+            <button class="btn btn-outline" id = "frameworks&languages_frameworks">_frameworks/libraries</button> 
+            <button class="btn btn-outline" id = "frameworks&languages_other">_other</button>
          </div>
 
          <div class="grid grid-4-5">
             
-            <div class="card flex hover">
+            <div class="card flex hover" id = "JS_card">
                <i class="fas fa-code  fa-2x"></i>
-               <div class="animated-text-one">
-                  <span></span>
-               </div>
+               <h1 class = "animated-text">Javascript</h1>
             </div>
 
-            <div class="card flex hover">
+            <div class="card flex hover" id = "C++_card">
                <i class="fas fa-code  fa-2x"></i>
-               <div class="animated-text-two">
-                  <span></span>
-               </div>
+               <h1 class = "animated-text">C++</h1>
             </div>
 
-            <div class="card flex hover">
+            <div class="card flex hover" id = "Python_card">
                <i class="fas fa-code  fa-2x"></i>
-               <div class="animated-text-three">
-                  <span></span>
-               </div>
+               <h1 class = "animated-text">Python</h1>
             </div>
 
-            <div class="card flex hover">
+            <div class="card flex hover" id = "Arduino_card">
                <i class="fas fa-code  fa-2x"></i>
-               <div class="animated-text-four">
-                  <span></span>
-               </div>
+               <h1 class = "animated-text">Arduino</h1>
+               
             </div>
 
-            <div class="card flex hover">
+            <div class="card flex hover" id = "React.js_card">
                <i class="fas fa-code  fa-2x"></i>
-               <div class="animated-text-five">
-                  <span></span>
-               </div>
+               <h1 class = "animated-text">React.js</h1>
             </div>
 
-            <div class="card flex hover">
+            <div class="card flex hover" id = "Node.js_card">
                <i class="fas fa-code  fa-2x"></i>
-               <div class="animated-text-six">
-                  <span></span>
-               </div>
+               <h1 class = "animated-text">Node.js</h1>
             </div>
 
-            <div class="card flex hover">
+            <div class="card flex hover" id = "Tailwind_card">
                <i class="fas fa-code  fa-2x"></i>
-               <div class="animated-text-seven">
-                  <span></span>
-               </div>
+               <h1 class = "animated-text">Tailwind</h1>
             </div>
 
          </div>
@@ -196,16 +181,16 @@
          <div class="contact-form flex my-2 ">
             <form>
                <div class="form-control">
-                  <input type="text" id="name" name="name" placeholder = "_your name*"required>
+                  <input type="text" id="indexForm_name" name="name" placeholder = "_your name*"required>
                </div>
                <div class="form-control">
-                  <input type="email" id="email" name="email" placeholder = "_your email*" required>
+                  <input type="email" id="indexForm_email" name="email" placeholder = "_your email*" required>
                </div>
                <div class="form-control">
-                  <textarea id="message" name="message" required placeholder = "_your message" required ></textarea>
+                  <textarea id="indexForm_message" name="indexForm_message" required placeholder = "_your message" required ></textarea>
                </div>
                <div class="text-center">
-                  <input type="submit" value="{send}" class="btn btn-primary">
+                  <button type="submit" value="{send}" class="btn btn-primary" id = "homeForm_submit"></button>
                </div>
          </form>
     
@@ -235,5 +220,6 @@
       </div>
   </footer>
 
+  <script src= /js/main.js></script>
 </body>
 </html>
